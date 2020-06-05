@@ -12,7 +12,7 @@ CREATE TABLE TBL_TIPO_CAMBIO(
   id INT AUTO_INCREMENT  PRIMARY KEY,
   tipoCambio    NUMBER(12,4) NOT NULL,
   codigoOrigen  CHAR(3) NOT NULL,
-  codigoDestino CHAR(3) DEFAULT NULL
+  codigoDestino CHAR(3) NOT NULL
 );
 
 INSERT INTO TBL_MONEDA (codigo, numero, divisa) VALUES

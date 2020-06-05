@@ -29,19 +29,18 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 		try {
 			String url = request.getRequestURI();
 			System.out.println(url);
-			if(url.contains("/swagger-ui.html")||url.contains("/h2-console")||url.contains("/favicon.ico")) {				
+			if(url.contains("/swagger-ui.html")||url.contains("/h2-console")||url.contains("||url.contains(\"/h2-console\")")) {				
 				UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken("usuario", null,
 						null);
 				SecurityContextHolder.getContext().setAuthentication(auth);
-			}else {
+			}
 			
-				if (existeJWTToken(request, response)) {
-					Claims claims = validateToken(request);
-					if (claims.get("authorities") != null) {
-						setUpSpringAuthentication(claims);
-					} else {
-						SecurityContextHolder.clearContext();
-					}
+			if (existeJWTToken(request, response)) {
+				Claims claims = validateToken(request);
+				if (claims.get("authorities") != null) {
+					setUpSpringAuthentication(claims);
+				} else {
+					SecurityContextHolder.clearContext();
 				}
 			}
 			chain.doFilter(request, response);
@@ -66,7 +65,7 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
 	private boolean existeJWTToken(HttpServletRequest request, HttpServletResponse res) {
 		String authenticationHeader = request.getHeader(ConstantesSecurity.HEADER);
-		request.getRequestURI();
+		
 		if (authenticationHeader == null || !authenticationHeader.startsWith(ConstantesSecurity.TOKEN_PREFIX))
 			return false;
 		return true;
