@@ -18,19 +18,19 @@ public class TipoCambioController {
 	private TipoCambioRepository tipoCambioRepository;
 	
 	@PutMapping("/{id}")
-	private TipoCambio actualizar(@RequestBody  TipoCambio tipoCambioNew, @PathVariable Integer id) {
+	private TipoCambio actualizar(@RequestBody  TipoCambio tipoCambio, @PathVariable Long id) {
 		
-		 return tipoCambioRepository.findById(id).map(employee -> {
-	            employee.setCodigoDestino(tipoCambioNew.getCodigoDestino());
-	            employee.setCodigoOrigen(tipoCambioNew.getCodigoOrigen());
-	            employee.setTipoCambio(tipoCambioNew.getTipoCambio());
-	            return tipoCambioRepository.save(employee);
+		 return repository.findById(id).map(employee -> {
+	            employee.setFirstName(newEmployee.getFirstName());
+	            employee.setLastName(newEmployee.getLastName());
+	            employee.setEmail(newEmployee.getEmail());
+	            return repository.save(employee);
 	        }).orElseGet(() -> {
-	        	tipoCambioNew.setId(id);
-	            return tipoCambioRepository.save(tipoCambioNew);
+	            newEmployee.setId(id);
+	            return repository.save(newEmployee);
 	        });
 		 
-		
+		return tipoCambioRepository.save(tipoCambio);
 	}
 	
 }

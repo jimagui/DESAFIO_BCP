@@ -30,7 +30,7 @@ public class TipoCambioController {
 	            return tipoCambioRepository.save(tipoCambioNew);
 	        });
 		 
-		
+		return tipoCambioRepository.save(tipoCambio);
 	}
 	
 }
