@@ -1,0 +1,24 @@
+package com.pe.desafio.bcp.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pe.desafio.bcp.segurity.AccessToken;
+
+@RestController
+public class LoginController {
+
+	@PostMapping("login")
+	public AccessToken login(@RequestParam("user") String username, @RequestParam("password") String pwd) {
+		
+		String token = "";//getJWTToken(username);
+		AccessToken user = new AccessToken();
+		user.setUserName(username);
+		user.setToken(token);		
+		return user;
+		
+	}
+	
+	
+}

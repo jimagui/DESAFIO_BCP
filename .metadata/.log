@@ -1,0 +1,2526 @@
+!SESSION 2020-06-03 12:23:25.590 -----------------------------------------------
+eclipse.buildId=4.6.2.202005250833-RELEASE
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_419
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.ui 2 0 2020-06-03 12:27:38.990
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-06-03 12:27:38.990
+!MESSAGE Defining a key binding with no key sequence has no effect: plug-in='org.springframework.ide.eclipse.boot.wizard', id='org.springframework.ide.eclipse.boot.wizard.addStarersSwitchHandler'
+
+!ENTRY org.eclipse.jface 2 0 2020-06-03 12:27:40.482
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-06-03 12:27:40.482
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@22854f2b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7ae0a26,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 0 2020-06-03 12:27:45.232
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-06-03 12:27:45.232
+!MESSAGE Defining a key binding with no key sequence has no effect: plug-in='org.springframework.ide.eclipse.boot.wizard', id='org.springframework.ide.eclipse.boot.wizard.addStarersSwitchHandler'
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-06-03 12:27:45.319
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\CANVIA'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:42:33.857
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:42:33.868
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@16ca4532[org.springframework.tooling.boot.ls:1.18.0.202005250744(id=636)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:42:33.892
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:42:34.233
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:42:43.602
+!MESSAGE Boot LS startup time from start to initialized: 9686ms
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-06-03 12:42:43.687
+!MESSAGE org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+!STACK 0
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:357)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1895)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.lambda$12(LSPTextHover.java:250)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.lambda$11(LSPTextHover.java:259)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:443)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$1(LanguageServerWrapper.java:245)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:42:43.705
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.eUWlkUDbisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:42:43.723
+!MESSAGE Creating project sorter...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:42:43.739
+!MESSAGE Creating project sorter... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:42:43.758
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:42:43.777
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:42:43.793
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:42:43.809
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.eUWlkUDb => OK
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:43:36.973
+!MESSAGE Failed to write tracking file C:\Users\CANVIA\.m2\repository\org\ow2\asm\asm\7.1\asm-7.1.pom.lastUpdated
+!STACK 0
+java.io.FileNotFoundException: C:\Users\CANVIA\.m2\repository\org\ow2\asm\asm\7.1\asm-7.1.pom.lastUpdated (Acceso denegado)
+	at java.io.RandomAccessFile.open0(Native Method)
+	at java.io.RandomAccessFile.open(RandomAccessFile.java:316)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:243)
+	at org.eclipse.aether.internal.impl.TrackingFileManager.update(TrackingFileManager.java:99)
+	at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.write(DefaultUpdateCheckManager.java:590)
+	at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.touchArtifact(DefaultUpdateCheckManager.java:526)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.evaluateDownloads(DefaultArtifactResolver.java:619)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:510)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:401)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:229)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:207)
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:240)
+	at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.readArtifactDescriptor(DefaultArtifactDescriptorReader.java:171)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.resolveCachedArtifactDescriptor(DefaultDependencyCollector.java:541)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.getArtifactDescriptorResult(DefaultDependencyCollector.java:524)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:412)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:365)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.process(DefaultDependencyCollector.java:352)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.doRecurse(DefaultDependencyCollector.java:509)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:461)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:365)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.process(DefaultDependencyCollector.java:352)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.doRecurse(DefaultDependencyCollector.java:509)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:461)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:365)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.process(DefaultDependencyCollector.java:352)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.doRecurse(DefaultDependencyCollector.java:509)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:461)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:365)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.process(DefaultDependencyCollector.java:352)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.doRecurse(DefaultDependencyCollector.java:509)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:461)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.processDependency(DefaultDependencyCollector.java:365)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.process(DefaultDependencyCollector.java:352)
+	at org.eclipse.aether.internal.impl.collect.DefaultDependencyCollector.collectDependencies(DefaultDependencyCollector.java:254)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.collectDependencies(DefaultRepositorySystem.java:284)
+	at org.apache.maven.project.DefaultProjectDependenciesResolver.resolve(DefaultProjectDependenciesResolver.java:169)
+	at org.apache.maven.project.DefaultProjectBuilder.resolveDependencies(DefaultProjectBuilder.java:227)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:644)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:387)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProjects(MavenImpl.java:658)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$13(ProjectRegistryManager.java:867)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:1022)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectsWithDependencies(ProjectRegistryManager.java:863)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:207)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:81)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:259)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:717)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$3.run(MavenPomEditor.java:1043)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:44:37.212
+!MESSAGE Failed to write tracking file C:\Users\CANVIA\.m2\repository\org\glassfish\hk2\hk2-locator\2.6.1\hk2-locator-2.6.1.jar.lastUpdated
+!STACK 0
+java.io.FileNotFoundException: C:\Users\CANVIA\.m2\repository\org\glassfish\hk2\hk2-locator\2.6.1\hk2-locator-2.6.1.jar.lastUpdated (Acceso denegado)
+	at java.io.RandomAccessFile.open0(Native Method)
+	at java.io.RandomAccessFile.open(RandomAccessFile.java:316)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:243)
+	at org.eclipse.aether.internal.impl.TrackingFileManager.update(TrackingFileManager.java:99)
+	at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.write(DefaultUpdateCheckManager.java:590)
+	at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.touchArtifact(DefaultUpdateCheckManager.java:526)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.evaluateDownloads(DefaultArtifactResolver.java:619)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:510)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:401)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:229)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveDependencies(DefaultRepositorySystem.java:340)
+	at org.apache.maven.project.DefaultProjectDependenciesResolver.resolve(DefaultProjectDependenciesResolver.java:202)
+	at org.apache.maven.project.DefaultProjectBuilder.resolveDependencies(DefaultProjectBuilder.java:227)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:200)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:124)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:629)
+	at org.eclipse.m2e.core.internal.project.registry.DefaultMavenDependencyResolver.resolveProjectDependencies(DefaultMavenDependencyResolver.java:65)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:547)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$3(ProjectRegistryManager.java:511)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:509)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:361)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:312)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.configureNewMavenProjects(ProjectConfigurationManager.java:265)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$0(ProjectConfigurationManager.java:174)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.importProjects(ProjectConfigurationManager.java:144)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.importProjects(ProjectConfigurationManager.java:134)
+	at org.springframework.ide.eclipse.boot.wizard.importing.MavenStrategy.createEclipseProjectFromExistingMavenProject(MavenStrategy.java:133)
+	at org.springframework.ide.eclipse.boot.wizard.importing.MavenStrategy$MavenCodeSetImport.run(MavenStrategy.java:84)
+	at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardModel.importProject(NewSpringBootWizardModel.java:352)
+	at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardModel.performFinish(NewSpringBootWizardModel.java:331)
+	at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizard$1.run(NewSpringBootWizard.java:228)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:44:39.232
+!MESSAGE Failed to write tracking file C:\Users\CANVIA\.m2\repository\org\ow2\asm\asm-util\7.1\asm-util-7.1.jar.lastUpdated
+!STACK 0
+java.io.FileNotFoundException: C:\Users\CANVIA\.m2\repository\org\ow2\asm\asm-util\7.1\asm-util-7.1.jar.lastUpdated (Acceso denegado)
+	at java.io.RandomAccessFile.open0(Native Method)
+	at java.io.RandomAccessFile.open(RandomAccessFile.java:316)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:243)
+	at org.eclipse.aether.internal.impl.TrackingFileManager.update(TrackingFileManager.java:99)
+	at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.write(DefaultUpdateCheckManager.java:590)
+	at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.touchArtifact(DefaultUpdateCheckManager.java:526)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.evaluateDownloads(DefaultArtifactResolver.java:619)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:510)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:401)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:229)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveDependencies(DefaultRepositorySystem.java:340)
+	at org.apache.maven.project.DefaultProjectDependenciesResolver.resolve(DefaultProjectDependenciesResolver.java:202)
+	at org.apache.maven.project.DefaultProjectBuilder.resolveDependencies(DefaultProjectBuilder.java:227)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:200)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:124)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:629)
+	at org.eclipse.m2e.core.internal.project.registry.DefaultMavenDependencyResolver.resolveProjectDependencies(DefaultMavenDependencyResolver.java:65)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:547)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$3(ProjectRegistryManager.java:511)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:509)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:361)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:312)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.configureNewMavenProjects(ProjectConfigurationManager.java:265)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$0(ProjectConfigurationManager.java:174)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.importProjects(ProjectConfigurationManager.java:144)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.importProjects(ProjectConfigurationManager.java:134)
+	at org.springframework.ide.eclipse.boot.wizard.importing.MavenStrategy.createEclipseProjectFromExistingMavenProject(MavenStrategy.java:133)
+	at org.springframework.ide.eclipse.boot.wizard.importing.MavenStrategy$MavenCodeSetImport.run(MavenStrategy.java:84)
+	at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardModel.importProject(NewSpringBootWizardModel.java:352)
+	at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardModel.performFinish(NewSpringBootWizardModel.java:331)
+	at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizard$1.run(NewSpringBootWizard.java:228)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:44:40.180
+!MESSAGE Failed to write tracking file C:\Users\CANVIA\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar.lastUpdated
+!STACK 0
+java.io.FileNotFoundException: C:\Users\CANVIA\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar.lastUpdated (Acceso denegado)
+	at java.io.RandomAccessFile.open0(Native Method)
+	at java.io.RandomAccessFile.open(RandomAccessFile.java:316)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:243)
+	at org.eclipse.aether.internal.impl.TrackingFileManager.update(TrackingFileManager.java:99)
+	at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.write(DefaultUpdateCheckManager.java:590)
+	at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.touchArtifact(DefaultUpdateCheckManager.java:526)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.evaluateDownloads(DefaultArtifactResolver.java:619)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:510)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:401)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:229)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveDependencies(DefaultRepositorySystem.java:340)
+	at org.apache.maven.project.DefaultProjectDependenciesResolver.resolve(DefaultProjectDependenciesResolver.java:202)
+	at org.apache.maven.project.DefaultProjectBuilder.resolveDependencies(DefaultProjectBuilder.java:227)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:200)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:124)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:629)
+	at org.eclipse.m2e.core.internal.project.registry.DefaultMavenDependencyResolver.resolveProjectDependencies(DefaultMavenDependencyResolver.java:65)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:547)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$3(ProjectRegistryManager.java:511)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:509)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:361)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:312)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.configureNewMavenProjects(ProjectConfigurationManager.java:265)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$0(ProjectConfigurationManager.java:174)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.importProjects(ProjectConfigurationManager.java:144)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.importProjects(ProjectConfigurationManager.java:134)
+	at org.springframework.ide.eclipse.boot.wizard.importing.MavenStrategy.createEclipseProjectFromExistingMavenProject(MavenStrategy.java:133)
+	at org.springframework.ide.eclipse.boot.wizard.importing.MavenStrategy$MavenCodeSetImport.run(MavenStrategy.java:84)
+	at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardModel.importProject(NewSpringBootWizardModel.java:352)
+	at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardModel.performFinish(NewSpringBootWizardModel.java:331)
+	at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizard$1.run(NewSpringBootWizard.java:228)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:44:41.188
+!MESSAGE Failed to write tracking file C:\Users\CANVIA\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar.lastUpdated
+!STACK 0
+java.io.FileNotFoundException: C:\Users\CANVIA\.m2\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar.lastUpdated (Acceso denegado)
+	at java.io.RandomAccessFile.open0(Native Method)
+	at java.io.RandomAccessFile.open(RandomAccessFile.java:316)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:243)
+	at org.eclipse.aether.internal.impl.TrackingFileManager.update(TrackingFileManager.java:99)
+	at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.write(DefaultUpdateCheckManager.java:590)
+	at org.eclipse.aether.internal.impl.DefaultUpdateCheckManager.touchArtifact(DefaultUpdateCheckManager.java:526)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.evaluateDownloads(DefaultArtifactResolver.java:619)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:510)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:401)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:229)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveDependencies(DefaultRepositorySystem.java:340)
+	at org.apache.maven.project.DefaultProjectDependenciesResolver.resolve(DefaultProjectDependenciesResolver.java:202)
+	at org.apache.maven.project.DefaultProjectBuilder.resolveDependencies(DefaultProjectBuilder.java:227)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:200)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:124)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:629)
+	at org.eclipse.m2e.core.internal.project.registry.DefaultMavenDependencyResolver.resolveProjectDependencies(DefaultMavenDependencyResolver.java:65)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:547)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$3(ProjectRegistryManager.java:511)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:509)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:361)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:312)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.configureNewMavenProjects(ProjectConfigurationManager.java:265)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$0(ProjectConfigurationManager.java:174)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.importProjects(ProjectConfigurationManager.java:144)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.importProjects(ProjectConfigurationManager.java:134)
+	at org.springframework.ide.eclipse.boot.wizard.importing.MavenStrategy.createEclipseProjectFromExistingMavenProject(MavenStrategy.java:133)
+	at org.springframework.ide.eclipse.boot.wizard.importing.MavenStrategy$MavenCodeSetImport.run(MavenStrategy.java:84)
+	at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardModel.importProject(NewSpringBootWizardModel.java:352)
+	at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizardModel.performFinish(NewSpringBootWizardModel.java:331)
+	at org.springframework.ide.eclipse.boot.wizard.NewSpringBootWizard$1.run(NewSpringBootWizard.java:228)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui 2 2 2020-06-03 12:45:14.955
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:06.070
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:06.086
+!MESSAGE classpath=1 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:06.100
+!MESSAGE buffering callback sts4.classpath.eUWlkUDb desafio false 1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:06.118
+!MESSAGE executing callback sts4.classpath.eUWlkUDb 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:08.142
+!MESSAGE executing callback sts4.classpath.eUWlkUDb FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2020-06-03 12:46:08.177
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1771)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1915)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:17.523
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:17.541
+!MESSAGE classpath=119 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:17.562
+!MESSAGE buffering callback sts4.classpath.eUWlkUDb desafio false 119
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:17.580
+!MESSAGE executing callback sts4.classpath.eUWlkUDb 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:18.813
+!MESSAGE executing callback sts4.classpath.eUWlkUDb SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:18.834
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:18.862
+!MESSAGE classpath=119 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:18.899
+!MESSAGE buffering callback sts4.classpath.eUWlkUDb desafio false 119
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:18.935
+!MESSAGE executing callback sts4.classpath.eUWlkUDb 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:19.105
+!MESSAGE executing callback sts4.classpath.eUWlkUDb SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:58.060
+!MESSAGE exists = false open = true => deleted = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:58.074
+!MESSAGE buffering callback sts4.classpath.eUWlkUDb desafio true 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:58.086
+!MESSAGE executing callback sts4.classpath.eUWlkUDb 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:58.210
+!MESSAGE executing callback sts4.classpath.eUWlkUDb SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:58.365
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.eUWlkUDb
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:58.387
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.eUWlkUDb
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:58.436
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:46:58.461
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.eUWlkUDb => OK
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:00.062
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:02.606
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:04.962
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:07.689
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:10.655
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:12.159
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:13.382
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:15.348
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:16.986
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:18.107
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:19.944
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:21.789
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:23.424
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:24.675
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:26.770
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:28.558
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:30.420
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:31.915
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:33.951
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:35.318
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:37.239
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:38.496
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:39.695
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:40.904
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:42.305
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:43.360
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:44.410
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:45.346
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:46.347
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:47.311
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:48.251
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:49.693
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:51.211
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:52.183
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:53.174
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:54.195
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:55.330
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:56.221
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:56.937
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:58.264
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:47:59.831
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:00.769
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:01.992
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:03.249
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:04.278
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:05.486
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:06.085
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:06.979
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:08.147
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:09.179
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:10.947
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:11.746
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:14.536
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:15.736
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:17.955
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:19.517
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:20.779
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:21.843
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:23.058
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:24.759
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:26.582
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:27.630
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:28.557
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:29.837
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:30.655
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:31.993
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:33.325
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:34.382
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:36.393
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:38.192
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:39.554
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:42.572
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:44.049
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:45.894
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:46.758
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:48.047
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:48.895
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:52.973
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:54.738
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:48:59.813
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.347
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.371
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.392
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.413
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.435
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.458
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.482
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.505
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.528
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.551
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.575
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.599
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.622
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.644
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.666
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.697
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.731
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.766
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.799
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.833
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.865
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.900
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.932
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.965
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:01.998
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.032
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.066
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.101
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.124
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.144
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.167
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.201
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.234
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.268
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.303
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.337
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.368
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.399
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.420
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.439
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.457
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.477
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.504
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.540
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.592
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.647
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.701
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.747
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.782
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.818
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.850
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.888
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:02.946
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.000
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.039
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.073
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.102
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.125
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.148
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.180
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.206
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.225
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.245
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.265
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.284
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.309
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.333
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.366
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.398
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.425
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.460
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.485
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.502
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.520
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.543
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.569
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.596
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.626
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.655
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.684
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.728
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.776
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.837
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.880
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.920
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:03.977
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.021
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.047
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.071
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.093
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.114
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.134
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.151
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.170
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.193
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.222
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.256
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.296
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.321
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.341
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.366
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.396
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.419
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.444
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.469
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.500
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.531
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.558
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.591
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.627
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.656
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.686
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.720
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.754
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.787
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.817
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.850
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.878
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.909
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.941
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:04.973
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.005
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.026
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.045
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.065
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.085
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.106
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.131
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.160
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.200
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.242
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.290
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.317
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.343
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.365
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.387
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.406
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.434
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.493
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.533
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.564
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.598
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.639
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.681
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.728
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.774
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.819
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.862
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.894
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.927
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.961
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:05.995
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.026
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.058
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.090
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.118
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.150
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.182
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.215
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.269
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.316
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.351
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.397
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.452
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.498
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.534
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.566
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.613
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.658
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.712
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.748
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.780
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.812
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.843
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.870
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.894
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.932
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:06.975
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.018
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.061
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.105
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.150
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.196
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.240
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.282
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.326
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.369
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.416
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.468
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.516
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.570
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.627
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.663
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.698
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.729
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.770
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.820
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.875
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.930
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:07.978
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.026
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.073
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.124
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.173
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.220
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.273
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.324
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.381
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.437
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.492
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.548
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.600
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.644
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.686
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.744
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.776
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.805
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.825
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.842
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.858
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.875
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.894
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.912
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.938
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.966
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:08.998
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.025
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.061
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.113
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.170
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.225
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.278
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.334
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.391
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.441
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.488
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.536
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.585
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.634
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.679
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.722
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.770
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.829
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.871
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.901
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.927
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.950
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:09.977
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.017
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.069
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.117
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.163
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.207
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.250
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.293
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.337
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.382
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.434
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.484
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.528
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.572
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.623
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.678
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.738
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.793
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.851
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.909
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:10.968
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:11.011
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:11.037
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:11.116
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:11.164
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:11.212
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:11.260
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:11.308
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:11.356
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:11.414
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:11.475
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:11.527
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:11.576
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-03 12:49:11.628
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/desafio
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:57.832
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:57.845
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@16ca4532[org.springframework.tooling.boot.ls:1.18.0.202005250744(id=636)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:57.857
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:59.647
+!MESSAGE Boot LS startup time from start to initialized: 1777ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:59.671
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.iImIrpKHisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:59.679
+!MESSAGE Creating project sorter...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:59.688
+!MESSAGE Creating project sorter... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:59.698
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:59.706
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:59.716
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:59.725
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:59.739
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.iImIrpKH => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:59.755
+!MESSAGE classpath=119 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:59.787
+!MESSAGE buffering callback sts4.classpath.iImIrpKH desafio false 119
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:59.808
+!MESSAGE executing callback sts4.classpath.iImIrpKH 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 12:52:59.883
+!MESSAGE executing callback sts4.classpath.iImIrpKH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 18:29:40.732
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 18:29:40.753
+!MESSAGE classpath=141 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 18:29:40.772
+!MESSAGE buffering callback sts4.classpath.iImIrpKH desafio false 141
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 18:29:40.782
+!MESSAGE executing callback sts4.classpath.iImIrpKH 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 18:29:40.804
+!MESSAGE executing callback sts4.classpath.iImIrpKH SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-06-03 18:30:13.507
+!MESSAGE Could not download sources for antlr:antlr:2.7.7
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:jar:sources:2.7.7
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing antlr:antlr:jar:sources:2.7.7
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-06-03 18:30:13.508
+!MESSAGE Could not resolve artifact antlr:antlr:jar:sources:2.7.7
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-06-03 18:30:13.508
+!MESSAGE Missing antlr:antlr:jar:sources:2.7.7
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 18:30:44.733
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 18:30:44.750
+!MESSAGE classpath=141 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 18:30:44.762
+!MESSAGE buffering callback sts4.classpath.iImIrpKH desafio false 141
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 18:30:44.771
+!MESSAGE executing callback sts4.classpath.iImIrpKH 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 18:30:44.786
+!MESSAGE executing callback sts4.classpath.iImIrpKH SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-06-03 18:30:47.656
+!MESSAGE Could not download javadoc for antlr:antlr:2.7.7
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:jar:javadoc:2.7.7
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:316)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing antlr:antlr:jar:javadoc:2.7.7
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-06-03 18:30:47.656
+!MESSAGE Could not resolve artifact antlr:antlr:jar:javadoc:2.7.7
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-06-03 18:30:47.656
+!MESSAGE Missing antlr:antlr:jar:javadoc:2.7.7
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:18:23.211
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.iImIrpKH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:18:23.222
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.iImIrpKH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:18:23.233
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:18:23.244
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.iImIrpKH => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:02.154
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:02.162
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@16ca4532[org.springframework.tooling.boot.ls:1.18.0.202005250744(id=636)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:02.172
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:06.351
+!MESSAGE Boot LS startup time from start to initialized: 4170ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:06.385
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.nsCoSmNOisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:06.394
+!MESSAGE Creating project sorter...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:06.404
+!MESSAGE Creating project sorter... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:06.412
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:06.421
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:06.431
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:06.440
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:06.448
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.nsCoSmNO => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:06.455
+!MESSAGE classpath=141 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:06.468
+!MESSAGE buffering callback sts4.classpath.nsCoSmNO desafio false 141
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:06.475
+!MESSAGE executing callback sts4.classpath.nsCoSmNO 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-03 21:19:06.500
+!MESSAGE executing callback sts4.classpath.nsCoSmNO SUCCESS [done]
+!SESSION 2020-06-04 13:30:03.048 -----------------------------------------------
+eclipse.buildId=4.6.2.202005250833-RELEASE
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_419
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-06-04 13:31:15.820
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 2 0 2020-06-04 13:31:16.831
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-06-04 13:31:16.831
+!MESSAGE Defining a key binding with no key sequence has no effect: plug-in='org.springframework.ide.eclipse.boot.wizard', id='org.springframework.ide.eclipse.boot.wizard.addStarersSwitchHandler'
+
+!ENTRY org.eclipse.jface 2 0 2020-06-04 13:31:19.460
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-06-04 13:31:19.460
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7a587e84,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@622ba721,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:31:40.920
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:31:40.948
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@7a085d02[org.springframework.tooling.boot.ls:1.18.0.202005250744(id=636)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:31:40.998
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:31:42.228
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.ui 2 0 2020-06-04 13:31:47.883
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-06-04 13:31:47.883
+!MESSAGE Defining a key binding with no key sequence has no effect: plug-in='org.springframework.ide.eclipse.boot.wizard', id='org.springframework.ide.eclipse.boot.wizard.addStarersSwitchHandler'
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-06-04 13:31:48.028
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\CANVIA'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:32:10.103
+!MESSAGE Boot LS startup time from start to initialized: 29042ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:32:10.354
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.UBDEbHjyisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:32:10.413
+!MESSAGE Creating project sorter...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:32:10.526
+!MESSAGE Creating project sorter... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:32:10.563
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:32:10.625
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:32:10.679
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:32:10.789
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.UBDEbHjy => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:32:10.838
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:32:11.002
+!MESSAGE classpath=141 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:32:11.047
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 141
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:32:11.086
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 13:32:11.183
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2020-06-04 16:11:30.397
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 16:13:26.220
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 16:13:26.239
+!MESSAGE classpath=142 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 16:13:26.254
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 142
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 16:13:26.263
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 16:13:26.281
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 16:13:32.861
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 16:13:32.881
+!MESSAGE classpath=142 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 16:13:32.894
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 142
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 16:13:32.902
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 16:13:32.919
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.eclipse.jface 2 0 2020-06-04 20:14:04.462
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-06-04 20:14:04.462
+!MESSAGE A conflict occurred for CTRL+R:
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.RunToLine,Run to Line,
+		Resume and break when execution reaches the current line,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@611c6902,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.debugging,,,system)
+Binding(CTRL+R,
+	ParameterizedCommand(Command(org.springframework.ide.eclipse.boot.restart.commands.restart,Trigger Restart,
+		Restart Spring Boot Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@799c8725,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:23:24.456
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:23:24.480
+!MESSAGE classpath=154 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:23:24.502
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 154
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:23:24.512
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:23:26.524
+!MESSAGE executing callback sts4.classpath.UBDEbHjy FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2020-06-04 21:23:26.557
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1771)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1915)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:23:59.590
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:23:59.608
+!MESSAGE classpath=154 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:23:59.623
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 154
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:23:59.632
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:23:59.646
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:39:08.549
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:39:08.596
+!MESSAGE classpath=155 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:39:08.623
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 155
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:39:08.640
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:39:08.668
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:39:13.141
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:39:13.159
+!MESSAGE classpath=155 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:39:13.175
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 155
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:39:13.186
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:39:13.198
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-04 21:56:51.437
+!MESSAGE The POM for io.springfox:springfox-swagger2:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-04 21:56:51.449
+!MESSAGE The POM for io.springfox:springfox-data-rest:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:56:52.312
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:56:52.329
+!MESSAGE classpath=151 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:56:52.343
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 149
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:56:52.351
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:56:52.364
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-04 21:56:53.098
+!MESSAGE The POM for io.springfox:springfox-swagger2:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-04 21:56:53.111
+!MESSAGE The POM for io.springfox:springfox-data-rest:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-06-04 21:56:53.266
+!MESSAGE Could not download sources for io.springfox:springfox-swagger2:3.0.0-SNAPSHOT
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact io.springfox:springfox-swagger2:jar:sources:3.0.0-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing io.springfox:springfox-swagger2:jar:sources:3.0.0-SNAPSHOT
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-06-04 21:56:53.266
+!MESSAGE Could not resolve artifact io.springfox:springfox-swagger2:jar:sources:3.0.0-SNAPSHOT
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-06-04 21:56:53.266
+!MESSAGE Missing io.springfox:springfox-swagger2:jar:sources:3.0.0-SNAPSHOT
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-06-04 21:56:53.286
+!MESSAGE Could not download sources for io.springfox:springfox-data-rest:3.0.0-SNAPSHOT
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact io.springfox:springfox-data-rest:jar:sources:3.0.0-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing io.springfox:springfox-data-rest:jar:sources:3.0.0-SNAPSHOT
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-06-04 21:56:53.286
+!MESSAGE Could not resolve artifact io.springfox:springfox-data-rest:jar:sources:3.0.0-SNAPSHOT
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-06-04 21:56:53.286
+!MESSAGE Missing io.springfox:springfox-data-rest:jar:sources:3.0.0-SNAPSHOT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-04 21:57:04.289
+!MESSAGE The POM for io.springfox:springfox-swagger2:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-04 21:57:04.302
+!MESSAGE The POM for io.springfox:springfox-data-rest:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-04 21:57:05.825
+!MESSAGE The POM for io.springfox:springfox-swagger2:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-04 21:57:05.849
+!MESSAGE The POM for io.springfox:springfox-data-rest:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-06-04 21:57:05.934
+!MESSAGE Could not download javadoc for io.springfox:springfox-swagger2:3.0.0-SNAPSHOT
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact io.springfox:springfox-swagger2:jar:javadoc:3.0.0-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:316)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing io.springfox:springfox-swagger2:jar:javadoc:3.0.0-SNAPSHOT
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-06-04 21:57:05.934
+!MESSAGE Could not resolve artifact io.springfox:springfox-swagger2:jar:javadoc:3.0.0-SNAPSHOT
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-06-04 21:57:05.934
+!MESSAGE Missing io.springfox:springfox-swagger2:jar:javadoc:3.0.0-SNAPSHOT
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-06-04 21:57:05.962
+!MESSAGE Could not download javadoc for io.springfox:springfox-data-rest:3.0.0-SNAPSHOT
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact io.springfox:springfox-data-rest:jar:javadoc:3.0.0-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:316)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing io.springfox:springfox-data-rest:jar:javadoc:3.0.0-SNAPSHOT
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-06-04 21:57:05.962
+!MESSAGE Could not resolve artifact io.springfox:springfox-data-rest:jar:javadoc:3.0.0-SNAPSHOT
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-06-04 21:57:05.962
+!MESSAGE Missing io.springfox:springfox-data-rest:jar:javadoc:3.0.0-SNAPSHOT
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-04 21:57:20.202
+!MESSAGE The POM for io.springfox:springfox-swagger-ui:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-04 21:57:20.213
+!MESSAGE The POM for io.springfox:springfox-swagger2:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-04 21:57:20.222
+!MESSAGE The POM for io.springfox:springfox-data-rest:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:57:20.882
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:57:20.902
+!MESSAGE classpath=145 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:57:20.921
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 142
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:57:20.931
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:57:20.946
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-04 21:57:21.668
+!MESSAGE The POM for io.springfox:springfox-swagger-ui:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-04 21:57:21.678
+!MESSAGE The POM for io.springfox:springfox-swagger2:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-06-04 21:57:21.687
+!MESSAGE The POM for io.springfox:springfox-data-rest:jar:3.0.0-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-06-04 21:57:21.730
+!MESSAGE Could not download sources for io.springfox:springfox-swagger-ui:3.0.0-SNAPSHOT
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact io.springfox:springfox-swagger-ui:jar:sources:3.0.0-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing io.springfox:springfox-swagger-ui:jar:sources:3.0.0-SNAPSHOT
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-06-04 21:57:21.730
+!MESSAGE Could not resolve artifact io.springfox:springfox-swagger-ui:jar:sources:3.0.0-SNAPSHOT
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-06-04 21:57:21.730
+!MESSAGE Missing io.springfox:springfox-swagger-ui:jar:sources:3.0.0-SNAPSHOT
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:16.384
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:16.401
+!MESSAGE classpath=161 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:16.418
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 161
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:16.428
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:16.444
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-06-04 21:58:17.611
+!MESSAGE Could not download sources for antlr:antlr:2.7.7
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:jar:sources:2.7.7
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not transfer artifact antlr:antlr:jar:sources:2.7.7 from/to jcenter-snapshots (http://oss.jfrog.org/artifactory/oss-snapshot-local/): Failed to transfer http://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7-sources.jar. Error code 409, 
+org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact antlr:antlr:jar:sources:2.7.7 from/to jcenter-snapshots (http://oss.jfrog.org/artifactory/oss-snapshot-local/): Failed to transfer http://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7-sources.jar. Error code 409, 
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:889)
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:1)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.flush(AetherRepositoryConnector.java:659)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:337)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:499)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:401)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:229)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:207)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:262)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:780)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: io.takari.aether.connector.TransferException: Failed to transfer http://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7-sources.jar. Error code 409, 
+	at io.takari.aether.connector.AetherRepositoryConnector.handleResponseCode(AetherRepositoryConnector.java:401)
+	at io.takari.aether.connector.AetherRepositoryConnector.access$8(AetherRepositoryConnector.java:391)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.resumableGet(AetherRepositoryConnector.java:603)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.run(AetherRepositoryConnector.java:481)
+	at io.takari.aether.connector.AetherRepositoryConnector$DirectExecutor.execute(AetherRepositoryConnector.java:915)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:331)
+	... 22 more
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-06-04 21:58:17.611
+!MESSAGE Could not resolve artifact antlr:antlr:jar:sources:2.7.7
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-06-04 21:58:17.611
+!MESSAGE Could not transfer artifact antlr:antlr:jar:sources:2.7.7 from/to jcenter-snapshots (http://oss.jfrog.org/artifactory/oss-snapshot-local/): Failed to transfer http://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7-sources.jar. Error code 409, 
+!STACK 0
+org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact antlr:antlr:jar:sources:2.7.7 from/to jcenter-snapshots (http://oss.jfrog.org/artifactory/oss-snapshot-local/): Failed to transfer http://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7-sources.jar. Error code 409, 
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:889)
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:1)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.flush(AetherRepositoryConnector.java:659)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:337)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:499)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:401)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:229)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:207)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:262)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:780)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: io.takari.aether.connector.TransferException: Failed to transfer http://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7-sources.jar. Error code 409, 
+	at io.takari.aether.connector.AetherRepositoryConnector.handleResponseCode(AetherRepositoryConnector.java:401)
+	at io.takari.aether.connector.AetherRepositoryConnector.access$8(AetherRepositoryConnector.java:391)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.resumableGet(AetherRepositoryConnector.java:603)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.run(AetherRepositoryConnector.java:481)
+	at io.takari.aether.connector.AetherRepositoryConnector$DirectExecutor.execute(AetherRepositoryConnector.java:915)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:331)
+	... 22 more
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:19.979
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:20.008
+!MESSAGE classpath=161 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:20.037
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 161
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:20.056
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:20.090
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-06-04 21:58:48.408
+!MESSAGE Could not download javadoc for antlr:antlr:2.7.7
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:jar:javadoc:2.7.7
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:316)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Could not transfer artifact antlr:antlr:jar:javadoc:2.7.7 from/to jcenter-snapshots (http://oss.jfrog.org/artifactory/oss-snapshot-local/): Failed to transfer http://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7-javadoc.jar. Error code 409, 
+org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact antlr:antlr:jar:javadoc:2.7.7 from/to jcenter-snapshots (http://oss.jfrog.org/artifactory/oss-snapshot-local/): Failed to transfer http://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7-javadoc.jar. Error code 409, 
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:889)
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:1)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.flush(AetherRepositoryConnector.java:659)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:337)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:499)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:401)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:229)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:207)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:262)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:780)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:316)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: io.takari.aether.connector.TransferException: Failed to transfer http://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7-javadoc.jar. Error code 409, 
+	at io.takari.aether.connector.AetherRepositoryConnector.handleResponseCode(AetherRepositoryConnector.java:401)
+	at io.takari.aether.connector.AetherRepositoryConnector.access$8(AetherRepositoryConnector.java:391)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.resumableGet(AetherRepositoryConnector.java:603)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.run(AetherRepositoryConnector.java:481)
+	at io.takari.aether.connector.AetherRepositoryConnector$DirectExecutor.execute(AetherRepositoryConnector.java:915)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:331)
+	... 22 more
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-06-04 21:58:48.409
+!MESSAGE Could not resolve artifact antlr:antlr:jar:javadoc:2.7.7
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-06-04 21:58:48.409
+!MESSAGE Could not transfer artifact antlr:antlr:jar:javadoc:2.7.7 from/to jcenter-snapshots (http://oss.jfrog.org/artifactory/oss-snapshot-local/): Failed to transfer http://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7-javadoc.jar. Error code 409, 
+!STACK 0
+org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact antlr:antlr:jar:javadoc:2.7.7 from/to jcenter-snapshots (http://oss.jfrog.org/artifactory/oss-snapshot-local/): Failed to transfer http://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7-javadoc.jar. Error code 409, 
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:889)
+	at io.takari.aether.connector.AetherRepositoryConnector$2.wrap(AetherRepositoryConnector.java:1)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.flush(AetherRepositoryConnector.java:659)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:337)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:499)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:401)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:229)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:207)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:262)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:780)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:316)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: io.takari.aether.connector.TransferException: Failed to transfer http://oss.jfrog.org/artifactory/oss-snapshot-local/antlr/antlr/2.7.7/antlr-2.7.7-javadoc.jar. Error code 409, 
+	at io.takari.aether.connector.AetherRepositoryConnector.handleResponseCode(AetherRepositoryConnector.java:401)
+	at io.takari.aether.connector.AetherRepositoryConnector.access$8(AetherRepositoryConnector.java:391)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.resumableGet(AetherRepositoryConnector.java:603)
+	at io.takari.aether.connector.AetherRepositoryConnector$GetTask.run(AetherRepositoryConnector.java:481)
+	at io.takari.aether.connector.AetherRepositoryConnector$DirectExecutor.execute(AetherRepositoryConnector.java:915)
+	at io.takari.aether.connector.AetherRepositoryConnector.get(AetherRepositoryConnector.java:331)
+	... 22 more
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:48.797
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:48.819
+!MESSAGE classpath=161 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:48.840
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 161
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:48.851
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 21:58:48.867
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:05:14.169
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:05:14.216
+!MESSAGE classpath=163 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:05:14.235
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 163
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:05:14.245
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:05:14.261
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:05:19.101
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:05:19.130
+!MESSAGE classpath=163 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:05:19.156
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 163
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:05:19.172
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:05:19.193
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:26:55.024
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:26:55.049
+!MESSAGE classpath=162 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:26:55.065
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 162
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:26:55.076
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:26:55.092
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:26:57.392
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:26:57.414
+!MESSAGE classpath=162 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:26:57.432
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 162
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:26:57.442
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 22:26:57.459
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 23:06:25.235
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 23:06:25.260
+!MESSAGE classpath=163 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 23:06:25.274
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 163
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 23:06:25.282
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 23:06:25.295
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 23:06:29.778
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 23:06:29.795
+!MESSAGE classpath=163 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 23:06:29.809
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 163
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 23:06:29.817
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-04 23:06:29.829
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:35:43.314
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:35:43.333
+!MESSAGE classpath=167 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:35:43.349
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 167
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:35:43.359
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:35:43.387
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:35:55.314
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:35:55.331
+!MESSAGE classpath=167 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:35:55.348
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 167
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:35:55.358
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:35:55.373
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:43:21.302
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:43:21.334
+!MESSAGE classpath=168 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:43:21.352
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 168
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:43:21.361
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:43:21.378
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:43:25.534
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:43:25.552
+!MESSAGE classpath=168 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:43:25.565
+!MESSAGE buffering callback sts4.classpath.UBDEbHjy desafio false 168
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:43:25.573
+!MESSAGE executing callback sts4.classpath.UBDEbHjy 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-06-05 02:43:25.587
+!MESSAGE executing callback sts4.classpath.UBDEbHjy SUCCESS [done]

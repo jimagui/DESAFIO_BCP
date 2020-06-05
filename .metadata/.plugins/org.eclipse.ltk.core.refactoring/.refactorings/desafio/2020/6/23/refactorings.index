@@ -1,0 +1,38 @@
+1591217010590	Rename package 'com.desafio.bcp.controller'
+1591217016386	Rename package 'com.desafio.bcp.dto'
+1591217041513	Rename package 'desafio'
+1591217541384	Rename package 'desafio'
+1591228224216	Delete element
+1591228995847	Rename package 'com.pe.desafio.service'
+1591229232158	Rename package 'com.pe.desafio.bcp.dao'
+1591229826332	Copy compilation unit
+1591230219349	Rename type 'monedaService'
+1591230229530	Copy compilation unit
+1591230384848	Delete elements
+1591230417637	Rename package 'com.pe.desafio.bcp.repository.imp'
+1591230443218	Delete element
+1591235781083	Rename package 'com.pe.desafio.bcp.repository.impl'
+1591235793526	Copy compilation unit
+1591235799107	Rename type 'MonedaService'
+1591235813937	Copy compilation unit
+1591235821541	Rename type 'MonedaService'
+1591235851855	Copy compilation unit
+1591235862438	Rename type 'MonedaDao'
+1591236556301	Delete element
+1591237090946	Rename package 'com.pe.desafio.bcp.repository.dao'
+1591237134379	Rename type 'MonedaService'
+1591237140817	Rename type 'TipoCambioService'
+1591237155054	Rename type 'MonedaDao'
+1591237163768	Rename type 'TipoCambioDao'
+1591237188026	Copy compilation unit
+1591237189493	Copy compilation unit
+1591237282558	Rename type 'MonedaService'
+1591237321000	Rename type 'TipoCambioService'
+1591305118759	Delete element
+1591312600332	Delete element
+1591326235443	Rename type 'TipoCambioController'
+1591329928475	Delete element
+1591334095313	Move file
+1591334689181	Delete elements
+1591336228232	Copy compilation unit
+1591337491483	Delete element

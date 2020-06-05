@@ -1,0 +1,7 @@
+package com.pe.desafio.bcp.entity;
+
+//@Entity
+//@Table(name = "TBL_ADJUNTOS_CAPACITACION")
+public class Moneda {
+
+}

@@ -1,0 +1,28 @@
+package com.pe.desafio.bcp.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pe.desafio.bcp.dto.ConversionDto;
+
+@RestController
+@RequestMapping("/api/tipoCambio")
+public class TipoCambioController {
+
+	@GetMapping("/conversion/{monto}/{monedaOrigen}/{monedaDestino}")
+	public ConversionDto getConversion( @PathVariable double monto,
+										@PathVariable String monedaOrigen,
+										@PathVariable String monedaDestino){
+		
+		ConversionDto conversionDto = new ConversionDto();
+		conversionDto.setMonto(10.0);
+		conversionDto.setMonedaDestino("SOLES");
+		conversionDto.setMonedaDestino("DOLARES");
+		conversionDto.setMontoCambio(33.0);
+		conversionDto.setTipoCambio(3.3);
+		//retornará al usuario con id pasado en la url
+		return conversionDto;
+	}
+}

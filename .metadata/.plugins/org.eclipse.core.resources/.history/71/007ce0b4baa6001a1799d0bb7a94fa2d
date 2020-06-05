@@ -1,0 +1,63 @@
+package com.pe.desafio.bcp.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TBL_TIPO_CAMBIO")
+public class TipoCambio {
+
+	@Id	
+	@GeneratedValue
+    @Column(name = "id", nullable = false)	
+	private  Integer id;
+	
+	@Column(name = "tipoCambio")
+	private  Double tipoCambio;
+	 
+	@Column(name = "codigoOrigen")
+	private  String codigoOrigen;
+	
+	@Column(name = "codigoDestino")
+	private  String codigoDestino;
+
+	
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Double getTipoCambio() {
+		return tipoCambio;
+	}
+
+	public void setTipoCambio(Double tipoCambio) {
+		this.tipoCambio = tipoCambio;
+	}
+
+	public String getCodigoOrigen() {
+		return codigoOrigen;
+	}
+
+	public void setCodigoOrigen(String codigoOrigen) {
+		this.codigoOrigen = codigoOrigen;
+	}
+
+	public String getCodigoDestino() {
+		return codigoDestino;
+	}
+
+	public void setCodigoDestino(String codigoDestino) {
+		this.codigoDestino = codigoDestino;
+	}
+	
+	
+	  
+}

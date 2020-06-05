@@ -1,0 +1,22 @@
+package pe.gob.servir.apicapacitamas.service.base;
+
+import java.util.List;
+
+import pe.gob.servir.apicapacitamas.dao.base.BaseDao;
+import pe.gob.servir.apicapacitamas.exception.DaoException;
+
+
+public interface BaseService<E, ID>{
+
+	void insertar(E entidad)throws DaoException;
+
+	void actualizar(E entidad)throws DaoException;
+
+	void eliminar(E entidad)throws DaoException;
+
+	E obtener(ID id)throws DaoException;
+
+	List<E> listar()throws DaoException;
+
+	void setBase(BaseDao<?, ?> baseDao);
+}

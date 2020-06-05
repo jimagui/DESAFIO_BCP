@@ -1,0 +1,17 @@
+package com.pe.desafio.bcp.repository.dao.impl;
+
+import java.util.Optional;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.pe.desafio.bcp.entity.Moneda;
+import com.pe.desafio.bcp.repository.dao.MonedaDao;
+
+
+public class MonedaDaoImpl implements MonedaDao{
+	public MonedaDaoImpl() {
+		super(Moneda.class);
+	}
+
+}

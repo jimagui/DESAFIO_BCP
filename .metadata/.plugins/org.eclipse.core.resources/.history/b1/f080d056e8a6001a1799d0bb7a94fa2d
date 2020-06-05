@@ -1,0 +1,9 @@
+FROM java:8
+
+WORKDIR /app/
+
+# Copiamos el JAR de nuestra aplicación a la imagen Docker
+COPY target/desafio-*.jar .
+
+# Corremos el archivo JAR
+CMD ["java", "-cp", "desafio-*.jar", "DesafioApplication.Main"]

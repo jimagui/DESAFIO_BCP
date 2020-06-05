@@ -1,0 +1,35 @@
+package com.pe.desafio.bcp.service.impl;
+
+import java.util.List;
+
+import org.apache.commons.math3.util.Precision;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.pe.desafio.bcp.entity.TipoCambio;
+import com.pe.desafio.bcp.repository.TipoCambioRepository;
+import com.pe.desafio.bcp.service.TipoCambioService;
+
+import rx.Observable;
+
+@Service
+public class TipoCambioServiceImpl implements TipoCambioService{
+	
+	@Autowired
+	private TipoCambioRepository tipoCambioRepository;
+
+	@Override
+	public TipoCambio obtenerTipoCambio(String monedaOrigen, String monedaDestino) {
+		
+		TipoCambio tipoCambio = tipoCambioRepository.findTipoCambio(monedaOrigen, monedaDestino);
+		if(tipoCambio ==null) {
+			 tipoCambio = tipoCambioRepository.findTipoCambio(monedaOrigen, monedaDestino);
+			 if(tipoCambio != null) tipoCambio.setTipoCambio(Precision.round(1/tipoCambio.getTipoCambio(),2));	
+		}
+		return tipoCambio;
+	}
+	
+	
+	
+	
+}

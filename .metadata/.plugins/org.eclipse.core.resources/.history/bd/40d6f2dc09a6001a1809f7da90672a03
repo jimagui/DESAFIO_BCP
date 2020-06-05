@@ -1,0 +1,10 @@
+package com.pe.desafio.bcp.service;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.pe.desafio.bcp.entity.Moneda;
+
+
+public interface MonedaService extends CrudRepository<Moneda, Integer>{
+
+}

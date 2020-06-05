@@ -1,0 +1,23 @@
+package com.pe.desafio.bcp.observer;
+
+import java.util.List;
+
+import com.pe.desafio.bcp.dto.ConversionDto;
+import com.pe.desafio.bcp.dto.ParametrosTipoCambioDto;
+import com.pe.desafio.bcp.entity.TipoCambio;
+
+import rx.Observable;
+import rx.Subscriber;
+
+public class TipoCambioConversionObservable  extends Observable<ParametrosTipoCambioDto>{
+
+	protected TipoCambioConversionObservable(OnSubscribe<ParametrosTipoCambioDto> f) {
+		super(f);
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+	
+
+}

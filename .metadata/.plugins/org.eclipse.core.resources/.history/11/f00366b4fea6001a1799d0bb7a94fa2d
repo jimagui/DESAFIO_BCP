@@ -1,0 +1,5 @@
+package com.pe.desafio.bcp.segurity;
+
+public class AccessToken {
+
+}

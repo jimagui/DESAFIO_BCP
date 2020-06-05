@@ -1,0 +1,22 @@
+package com.pe.desafio.bcp.dao.base;
+
+import java.util.List;
+import java.util.Map;
+
+
+public interface BaseDao<E, ID> {
+
+	void insertar(E entidad)throws Exception;
+
+	void actualizar(E entidad)throws Exception;
+
+	void eliminar(E entidad)throws Exception;
+
+	E obtener(ID id)throws Exception;
+
+	List<E> listar()throws Exception;
+	
+	<T> List<T> getResultList(Class<T> entityClass, Map<String, Object> filter) throws Exception;
+	
+	<T> T getFirstResult(Class<T> entityClass, Map<String, Object> filter) throws Exception;
+}

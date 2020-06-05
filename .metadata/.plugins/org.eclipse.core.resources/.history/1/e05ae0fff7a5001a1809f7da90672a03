@@ -1,0 +1,19 @@
+package com.pe.desafio.bcp.service.base;
+
+import java.util.List;
+
+
+public interface BaseService<E, ID>{
+
+	void insertar(E entidad)throws Exception;
+
+	void actualizar(E entidad)throws Exception;
+
+	void eliminar(E entidad)throws Exception;
+
+	E obtener(ID id)throws Exception;
+
+	List<E> listar()throws Exception;
+
+	void setBase(BaseDao<?, ?> baseDao);
+}

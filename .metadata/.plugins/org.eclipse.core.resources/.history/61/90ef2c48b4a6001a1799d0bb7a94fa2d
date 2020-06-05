@@ -1,0 +1,27 @@
+package com.pe.desafio.bcp.observer;
+
+import com.pe.desafio.bcp.dto.ConversionDto;
+
+import rx.Subscriber;
+
+public class TipoCambioConversion extends Subscriber<ConversionDto>{
+
+	@Override
+	public void onCompleted() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onError(Throwable e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onNext(ConversionDto t) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

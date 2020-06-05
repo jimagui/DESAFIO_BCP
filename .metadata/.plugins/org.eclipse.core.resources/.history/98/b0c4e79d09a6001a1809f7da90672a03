@@ -1,0 +1,9 @@
+package com.pe.desafio.bcp.repository.dao;
+
+import org.springframework.data.repository.CrudRepository;
+import com.pe.desafio.bcp.entity.Moneda;
+
+
+public interface TipoCambioDao extends CrudRepository<Moneda, Integer>{
+
+}

@@ -1,0 +1,12 @@
+package com.pe.desafio.bcp.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.pe.desafio.bcp.entity.Moneda;
+import com.pe.desafio.bcp.entity.TipoCambio;
+
+@Repository
+public interface TipoCambioService extends CrudRepository<TipoCambio, Integer>{
+
+}

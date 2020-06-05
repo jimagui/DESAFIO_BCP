@@ -1,0 +1,55 @@
+package com.pe.desafio.bcp.service.base;
+
+import java.util.List;
+
+import com.pe.desafio.bcp.dao.base.BaseDao;
+
+public class BaseServiceImpl<E, ID> implements BaseService<E, ID> {
+    
+	private BaseDao<E, ID> baseDao;
+		
+	@Override	
+	public void insertar(E entidad) throws Exception {		
+			baseDao.insertar(entidad); 
+	}
+
+	@Override	
+	public void actualizar(E entidad) throws Exception {
+		try {
+			baseDao.actualizar(entidad);
+		} catch (Exception e) {
+			throw new DaoException(e.getMessage());
+		}
+	}	 
+
+	@Override
+	public E obtener(ID id) throws Exception {
+		try {
+			return baseDao.obtener(id);
+		} catch (Exception e) {
+			throw new DaoException(e.getMessage());
+		}
+	}
+
+	@Override
+	public List<E> listar() throws Exception {
+		try {
+			return baseDao.listar();
+		} catch (Exception e) {
+			throw new DaoException(e.getMessage());
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public void setBase(BaseDao<?, ?> baseDao) {
+		this.baseDao = (BaseDao<E, ID>) baseDao;
+	}
+
+	@Override
+	public void eliminar(E entidad) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

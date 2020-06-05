@@ -1,0 +1,116 @@
+package pe.gob.servir.apicapacitamas.dao.base;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceContextType;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+
+import org.jboss.logging.Logger;
+
+import pe.gob.servir.apicapacitamas.constante.ConstantesParametros;
+import pe.gob.servir.apicapacitamas.dao.base.BaseDao;
+import pe.gob.servir.apicapacitamas.exception.DaoException;
+
+@Stateless(name = "BaseDao")
+public abstract class BaseDaoImpl<E, ID> implements BaseDao<E, ID> {
+    
+	private static final Logger LOGGER = Logger.getLogger(BaseDaoImpl.class);
+	
+	@PersistenceContext(unitName = ConstantesParametros.ContextoBD, type = PersistenceContextType.TRANSACTION)
+	private EntityManager entityManager;
+	
+	protected Class<E> classEntidad;
+	
+	public BaseDaoImpl(Class<E> entidadClass){
+		this.classEntidad = entidadClass;
+	}
+	
+		
+	@Override	
+	public void insertar(E entidad) throws DaoException {
+		try {
+			entityManager.persist(entidad);
+		} catch (Exception e) {
+			throw new DaoException(e.getMessage());
+		}
+
+	}
+
+	@Override	
+	public void actualizar(E entidad) throws DaoException {
+		try {
+			entityManager.merge(entidad);
+		} catch (Exception e) {
+			throw new DaoException(e.getMessage());
+		}
+	}
+	
+	
+
+
+	@Override
+	public void eliminar(E entidad) throws DaoException {
+		try {
+			entityManager.remove(entidad);
+		} catch (Exception e) {
+			throw new DaoException(e.getMessage());
+		}
+	}
+
+	@Override
+	public E obtener(ID id) throws DaoException {
+		E entidad = entityManager.find(classEntidad, id);
+		return entidad;
+	}
+
+	@Override
+	public List<E> listar() throws DaoException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public <T> List<T> getResultList(Class<T> entityClass, Map<String, Object> filter) throws DaoException {
+        try {
+            CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+            CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClass);
+            Root<T> root = criteriaQuery.from(entityClass);
+
+            List<Predicate> predicates = new ArrayList<>();
+            filter.forEach((key, value) -> predicates.add(criteriaBuilder.equal(root.get(key), value)));
+
+            criteriaQuery.where(criteriaBuilder.and(predicates.toArray(new Predicate[0])));
+            return entityManager.createQuery(criteriaQuery).getResultList();
+
+        } catch (Exception e) {
+            LOGGER.error(e.getMessage(), e);
+            throw new DaoException(e.getMessage());
+        }
+    }
+
+	
+	public <T> T getFirstResult(Class<T> entityClass, Map<String, Object> filter) throws DaoException {
+		try {
+			CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+			CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClass);
+			Root<T> root = criteriaQuery.from(entityClass);
+
+			List<Predicate> predicates = new ArrayList<>();
+			filter.forEach((key, value) -> predicates.add(criteriaBuilder.equal(root.get(key), value)));
+
+			criteriaQuery.where(criteriaBuilder.and(predicates.toArray(new Predicate[0])));
+			return entityManager.createQuery(criteriaQuery).getResultList().stream().findFirst().orElse(null);
+
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage(), e);
+			throw new DaoException(e.getMessage());
+		}
+	}
+}

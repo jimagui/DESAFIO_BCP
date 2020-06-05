@@ -1,0 +1,11 @@
+package com.pe.desafio.bcp.service;
+
+import java.util.List;
+
+import com.pe.desafio.bcp.entity.TipoCambio;
+
+import rx.Observable;
+
+public interface TipoCambioService{
+
+}

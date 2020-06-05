@@ -1,0 +1,42 @@
+package com.pe.desafio.bcp.observer;
+
+import java.util.List;
+
+import com.pe.desafio.bcp.dto.ConversionDto;
+import com.pe.desafio.bcp.entity.TipoCambio;
+
+import rx.Single;
+import rx.Subscriber;
+
+public class TipoCambioConversion extends Single<TipoCambio>{
+
+	@Override
+	public void onCompleted() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onError(Throwable e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onNext(List<TipoCambio> t) {
+		System.out.println(t.get(0).toString());
+	}
+	
+	public ConversionDto getConversion() {
+		ConversionDto conversionDto = new ConversionDto();
+		conversionDto.setMonto(10.0);
+		conversionDto.setMonedaDestino("SOLES");
+		conversionDto.setMonedaDestino("DOLARES");
+		conversionDto.setMontoCambio(33.0);
+		conversionDto.setTipoCambio(3.3);
+		return conversionDto;
+	}
+
+	
+
+}

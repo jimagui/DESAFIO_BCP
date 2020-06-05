@@ -1,0 +1,24 @@
+package com.pe.desafio.bcp.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.pe.desafio.bcp.entity.TipoCambio;
+import com.pe.desafio.bcp.repository.TipoCambioRepository;
+import com.pe.desafio.bcp.service.TipoCambioService;
+
+import rx.Observable;
+
+
+public class TipoCambioServiceImpl implements TipoCambioService{
+	
+	@Autowired
+	private TipoCambioRepository tipoCambioRepository;
+	
+	
+	public Observable<TipoCambio> obtenerTipoCambio (double monto, String monedaOrigen, String monedaDestino){
+		
+		return null;
+		
+	}
+	
+}

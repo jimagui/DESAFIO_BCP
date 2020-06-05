@@ -1,0 +1,35 @@
+package com.pe.desafio.bcp.observer;
+
+import com.pe.desafio.bcp.entity.TipoCambio;
+
+import rx.Subscriber;
+
+public class TipoCambioConversion  extends  Subscriber<TipoCambio>{
+
+
+	public TipoCambioConversion() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void onCompleted() {
+		System.out.println("onCompleted");
+		
+	}
+
+	@Override
+	public void onError(Throwable e) {
+		System.out.println("onError");
+		
+	}
+
+	@Override
+	public void onNext(TipoCambio t) {
+		System.out.println(" onNext tipo CAmbio : "+t.getTipoCambio());
+		
+	}
+
+	
+
+}

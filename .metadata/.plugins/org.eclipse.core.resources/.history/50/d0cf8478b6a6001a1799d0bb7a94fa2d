@@ -1,0 +1,14 @@
+package com.pe.desafio.bcp.repository;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.pe.desafio.bcp.entity.TipoCambio;
+
+@Repository
+public interface TipoCambioRepository extends CrudRepository<TipoCambio, Integer>{
+
+	List<TipoCambio> findTipoCambio(String codigoOrigen, String codigoDestino);
+}

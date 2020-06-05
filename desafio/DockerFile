@@ -1,0 +1,6 @@
+FROM openjdk:8-jdk-slim
+# Copiamos el JAR de nuestra aplicación a la imagen Docker
+COPY "./target/DesafioBcp.jar" "app.jar"
+
+# Corremos el archivo JAR
+ENTRYPOINT ["java","-jar","app.jar"]

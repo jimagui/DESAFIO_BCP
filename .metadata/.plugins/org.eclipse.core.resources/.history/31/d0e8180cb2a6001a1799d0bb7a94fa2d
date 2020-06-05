@@ -1,0 +1,36 @@
+package com.pe.desafio.bcp.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.pe.desafio.bcp.entity.TipoCambio;
+import com.pe.desafio.bcp.repository.TipoCambioRepository;
+import com.pe.desafio.bcp.service.TipoCambioService;
+
+import rx.Observable;
+
+
+public class TipoCambioServiceImpl implements TipoCambioService{
+	
+	@Autowired
+	private TipoCambioRepository tipoCambioRepository;
+	
+	
+	public Observable<TipoCambio> obtenerTipoCambio (double monto, String monedaOrigen, String monedaDestino){
+		
+		 Observable<TipoCambio> todoObservable = Observable.create(emitter -> {
+		     try {
+		    	 List<TipoCambio> listaTipoCambio =  tipoCambioRepository.findTipoCambio(monedaOrigen, monedaDestino);
+		 		 TipoCambio tipoCambio = listaTipoCambio.stream().findFirst().get();
+		         emitter.onNext(tipoCambio);		       
+		         emitter.onCompleted();
+		     } catch (Exception e) {
+		         emitter.onError(e);
+		     }
+		  });		 
+		  return todoObservable;
+		
+	}
+	
+}

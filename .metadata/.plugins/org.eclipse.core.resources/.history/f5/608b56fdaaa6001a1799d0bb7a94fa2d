@@ -1,0 +1,17 @@
+package com.pe.desafio.bcp.service.impl;
+
+import com.pe.desafio.bcp.entity.TipoCambio;
+import com.pe.desafio.bcp.service.TipoCambioService;
+
+import rx.Observable;
+
+
+public class TipoCambioServiceImpl implements TipoCambioService{
+  
+	
+	
+	public Observable<TipoCambio> obtenerTipoCambio (double monto, String monedaOrigen, String monedaDestino){
+		
+	}
+	
+}
